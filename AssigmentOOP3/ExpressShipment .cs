@@ -29,10 +29,10 @@ namespace AssigmentOOP3
                 return extrafee;
             }
         }
+       //over ride1
         public override decimal EstimatedCost
         {
-
-
+            
             get
             {
                 return base.EstimatedCost + Extrafee;
@@ -41,6 +41,11 @@ namespace AssigmentOOP3
 
         #endregion
 
+        }
+        //method over ride 3
+        public override string PrintShipment()
+        {
+            return $" {base.PrintShipment()}EstimatedCost: {EstimatedCost}Extrafee:{Extrafee}";
         }
     }
     }

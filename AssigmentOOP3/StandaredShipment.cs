@@ -13,5 +13,11 @@ namespace AssigmentOOP3
 
         }
         #endregion
+       //method over ride 1 standardshipment
+        public override string PrintShipment()
+        {
+            return $"{base.PrintShipment()}EstimatedCost:{EstimatedCost}";
+        }
+
     }
 }

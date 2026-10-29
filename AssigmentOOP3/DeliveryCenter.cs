@@ -11,6 +11,11 @@ namespace AssigmentOOP3
         public string CenterName { get; set; }
         private int counter;
         private Shipment[] shiments = new Shipment[20];
+        public Driver Driver { get; set; }
+        public DeliveryCenter()
+        {
+            
+        }
 
         public DeliveryCenter(string c)
         {
@@ -99,7 +104,8 @@ namespace AssigmentOOP3
             }
             for (int i = 0; i < counter; i++)
             {
-                Console.WriteLine(shiments[i].PrintShipment());
+                shiments[i].PrintShipment();
+
             }
       
 

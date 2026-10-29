@@ -32,6 +32,7 @@ namespace AssigmentOOP3
                 return destinationCountry;
             }
         }
+       // over ride 2
         public override decimal EstimatedCost
         {
             get { return base.EstimatedCost + CustomsFee; }
@@ -52,7 +53,18 @@ namespace AssigmentOOP3
 
         
             }
+           
         }
 
+        public override string PrintShipment()
+        {
+            return $"{base.PrintShipment()}EstimatedCost: {EstimatedCost}DestinationCountry: {DestinationCountry}CustomsFee:{CustomsFee}";
+        }
+      //answer 7 
+        public virtual void GenerateCustomsReport()
+        {
+            Console.WriteLine("internationalSgipment");
+        }
     }
+    
 }
