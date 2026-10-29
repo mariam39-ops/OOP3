@@ -12,10 +12,12 @@ namespace AssigmentOOP3
         private int counter;
         private Shipment[] shiments = new Shipment[20];
         public Driver Driver { get; set; }
-        public DeliveryCenter()
-        {
-            
-        }
+        //public DeliveryCenter(string centertn,Shipment[] shap,Driver d)
+        //{
+        //    CenterName = centertn;
+        //    Shipment=shap;
+        //    Driver = d;
+        //}
 
         public DeliveryCenter(string c)
         {
@@ -29,7 +31,7 @@ namespace AssigmentOOP3
 
 
                     return shiments[shi];
-                return default;
+                return default!;
 
             }
             set
@@ -60,7 +62,7 @@ namespace AssigmentOOP3
         {
             for (int i = 0; i < shiments.Length; i++)
             {
-                if (shiments[i].Equals(default(Shipment)))
+                if (shiments[i] == null)
                 {
                     shiments[i] = s;
                     counter++;
@@ -104,8 +106,7 @@ namespace AssigmentOOP3
             }
             for (int i = 0; i < counter; i++)
             {
-                shiments[i].PrintShipment();
-
+                Console.WriteLine(shiments[i].PrintShipment());
             }
       
 

@@ -8,7 +8,7 @@ namespace AssigmentOOP3
     {//answer 6
        public static void PrintShipmentDetails(Shipment shipment)
         {
-            shipment.PrintShipment();
+           Console.WriteLine( shipment.PrintShipment());
         }
     }
 }
